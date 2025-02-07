@@ -1,5 +1,17 @@
+terraform {
+  required_providers {
+    azurerm = {
+        source = "hashicorp/azurerm"
+        version = "4.18.0"
+    }
+}
+}
+provider "azurerm" {
+  subscription_id   = "3ba70bac-d8e7-4f2b-8e18-7fa19d2fb0f1"
+  features {}
+}
+
 resource "azurerm_resource_group" "rg" {
-    for_each = var.rg_map1
-    name = each.value.rg_name
-    location = each.value.location  
+    name = "git-rg"
+    location = "eastus"
 }
