@@ -1,1 +1,1 @@
-variable "rg_map" {}
+variable "rg_map1" {}
